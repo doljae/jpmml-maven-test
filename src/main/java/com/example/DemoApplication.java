@@ -27,6 +27,8 @@ public class DemoApplication {
             e.printStackTrace();
         } catch (SAXException | JAXBException e) {
             e.printStackTrace();
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 

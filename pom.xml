@@ -40,7 +40,31 @@
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-test</artifactId>
+      <exclusions>
+        <exclusion>
+          <groupId>jakarta.xml.bind</groupId>
+          <artifactId>jakarta.xml.bind-api</artifactId>
+        </exclusion>
+      </exclusions>
       <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.jpmml</groupId>
+      <artifactId>pmml-evaluator-metro</artifactId>
+      <version>1.6.3</version>
+    </dependency>
+    <!-- Override Jakarta XML Bind interface -->
+    <dependency>
+      <groupId>jakarta.xml.bind</groupId>
+      <artifactId>jakarta.xml.bind-api</artifactId>
+      <version>3.0.1</version>
+    </dependency>
+
+    <!-- Override Jakarta XML Bind implementation -->
+    <dependency>
+      <groupId>org.glassfish.jaxb</groupId>
+      <artifactId>jaxb-runtime</artifactId>
+      <version>3.0.2</version>
     </dependency>
   </dependencies>
 
